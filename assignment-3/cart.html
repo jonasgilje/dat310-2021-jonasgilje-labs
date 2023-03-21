@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Assignment 3</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+    <header>
+        <div id="header-max-width">
+        <div id="logo-area">
+            <h1>BookFace</h1>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">&#x1f3e0;</a>
+                </li>
+                <li>
+                    <a href="product.html">&#x1f6cd;</a>
+                </li>
+                <li>
+                    <a href="cart.html">&#x1f4b8;</a>
+                </li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    <main><div class="wrapper">
+        <h1>Cart</h1>
+        <div class="framed">
+        	<table id="cart-table" width="100%">
+        		<thead>
+        			<tr>
+        				<th>Product</th>
+        				<th>Size</th>
+        				<th>Count</th>
+        				<th>Item price (NOK)</th>
+        				<th>Discount</th>
+        				<th>Price</th>
+        				<th style="float:right;">Cancel</th>
+        			</tr>
+        		</thead>
+        		<tbody>
+        			<tr>
+        				<td>Mitch is worried</td>
+        				<td>A3</td>
+        				<td>1</td>
+        				<td>310.99</td>
+        				<td>1%</td>
+        				<td>307.88</td>
+        				<td><button>&#215;</button></td>
+        			</tr>
+        			<tr>
+        				<td>Mitch is unimpressed</td>
+        				<td>A2</td>
+        				<td>1</td>
+        				<td>341.34</td>
+        				<td></td>
+        				<td>341.34</td>
+        				<td><button>&#215;</button></td>
+        			</tr>
+        			<tr>
+        				<td>Mitch is tired of bullshit</td>
+        				<td>A1</td>
+        				<td>3</td>
+        				<td>292.94</td>
+        				<td></td>
+        				<td>878.82</td>
+        				<td><button>&#215;</button></td>
+        			</tr>
+        			<tr>
+        				<td>Totals</td>
+        				<td></td>
+        				<td></td>
+        				<td></td>
+        				<td></td>
+        				<td>1,528.04</td>
+        				<td></td>
+        			</tr>
+        		</tbody>
+        	</table>
+        </div>
+        <h1>Checkout</h1>
+        <form>
+        <div class="framed" id="checkout">
+        	<div class="framed">
+        		<h3>Billing details</h3>
+        		
+        			<div class="checkout-flexbox">
+        				<table>
+        					<tr>
+        						<td>First name</td>
+        						<td><input type="text" name=""></td>
+        					</tr>
+						</table>
+						<table>
+        					<tr>
+        						<td>Last name</td>
+        						<td><input type="text" name=""></td>
+        					</tr>
+        				</table>
+						<table>
+        					<tr>
+        						<td>Email</td>
+        						<td><input type="text" name=""></td>
+        					</tr>
+        				</table>
+        			</div>
+        		
+        	</div>
+        	<div class="framed">
+        		<h3>Delivery address</h3>
+        		
+        			<div class="checkout-flexbox">
+        				<table>
+        					<tr>
+        						<td>Street</td>
+        						<td><input type="text" name=""></td>
+        					</tr>
+        				</table>
+						<table>
+        					<tr>
+        						<td>City</td>
+        						<td><input type="text" name=""></td>
+        					</tr>
+        				</table>
+						<table>
+        					<tr>
+        						<td>Postal code</td>
+        						<td><input type="text" name=""></td>
+        					</tr>
+        				</table>
+        			</div>
+        		
+	        </div>
+	        <div class="framed">
+	        	<h3>Submit order</h3>
+	        	<div>
+		        	<p><input type="checkbox" name=""> I agree to the general terms of service</p>
+		        	<button>Submit</button>
+	        	</div>
+	        </div>
+        </div>
+        </form>
+        <div class="push"></div></div>
+    </main>
+    <footer>
+        <p>Customer info and other useless shit | +47 123 45 678 | noreply@statensvegvesen.no</p>
+    </footer>
+</body>
+</html>

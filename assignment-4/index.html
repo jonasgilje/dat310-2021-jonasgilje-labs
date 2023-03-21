@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAT310 Assignment 4</title>
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+    <script src="https://kit.fontawesome.com/1945e2bf08.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <style type="text/css" id="custom-style"></style>
+</head>
+<body>
+<main>
+	<div id="top-bar">
+		<div> <!-- left -->
+			<input type="text" name="" placeholder="Search" size="15" id="search-input">
+			<i class="fas fa-sort-amount-down"></i>
+			<select>
+				<option disabled selected>Sort by</option>
+				<option value="0">Name</option>
+				<option value="1">Telephone</option>
+				<option value="2">Email</option>
+			</select>
+		</div>
+		<div> <!-- right -->
+			<button><i class="fas fa-plus"></i></button>
+			<button><i class="fas fa-cog"></i></button>
+		</div>
+	</div>
+	<div id="add-entry" style="display:none;">
+		<i class="fas fa-times" style="float:right;"></i>
+		<span id="add-entry-heading">Add entry</span><br>
+		<label for="add-entry-name">Name:</label>
+		<input type="text" name="" id="add-entry-name"><br>
+		<label for="add-entry-tel">Tel:</label>
+		<input type="text" name="" id="add-entry-tel"><br>
+		<label for="add-entry-email">Email:</label>
+		<input type="text" name="" id="add-entry-email"><br>
+		<button id="add-entry-button">Add</button>
+	</div>
+	<div id="settings" style="display:none;">
+		<i class="fas fa-times" style="float:right;"></i>
+		<span id="add-entry-heading">Settings</span><br>
+		<label for="font-select">Font:</label>
+		<select id="font-select"></select><br>
+		<label>Size:</label>
+		<input type="radio" name="size" id="small" value="0">
+		<label for="small">Small</label>
+		<input type="radio" name="size" id="normal" value="1" checked>
+		<label for="normal">Normal</label>
+		<input type="radio" name="size" id="large" value="2">
+		<label for="large">Large</label><br>
+		<label for="color-select">Color:</label>
+		<select id="color-select"></select><br>
+		<button id="settings-button">Change</button>
+	</div>
+	<div id="list-container">
+	</div>
+</main>	
+</body>
+</html>

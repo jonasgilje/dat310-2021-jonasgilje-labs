@@ -1,0 +1,11 @@
+{% extends "base.html" %}{% block heading %}Register new student{% endblock %}
+{% block container %}
+
+<form action="{{url_for('add_student')}}" method="POST">
+  <label for="name">Name</label>
+  <input type="text" name="name" id="name" />
+  <br />
+  <label></label>
+  <input type="submit" value="Submit" />
+</form>
+{% endblock %}

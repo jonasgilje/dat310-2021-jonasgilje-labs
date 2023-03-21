@@ -1,0 +1,91 @@
+body {
+	background-color: #14213d;
+}
+
+main {
+	background-color: white;
+	margin: 0 auto;
+	width: 400px;
+	padding: 5px;
+}
+
+span, a, label {
+	font-family: sans-serif;
+}
+
+#top-bar {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+#list-container,
+#add-entry,
+#settings {
+	border: 5px solid lightgrey;
+	margin-top: 5px;
+	padding: 2px 3px;
+}
+
+#add-entry,
+#settings { /* source order rule */
+	padding: 5px;
+}
+
+.list-entry {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	border: 1px solid grey;
+	border-left-width: 5px;
+	padding: 5px;
+	margin: 2px 0;
+}
+
+.entry-name {
+	font-weight: bold;
+}
+
+.entry-telephone,
+.entry-email {
+	font-size: 0.8em;
+}
+
+.entry-email:visited {
+	color: blue;
+}
+
+.list-entry > div {
+	display: flex;
+	flex-direction: column;
+}
+
+.list-entry i {
+	font-size: 0.8em;
+	margin-bottom: 5px;
+	margin-right: -2px;
+}
+
+#add-entry-heading,
+#settings-heading {
+	font-size: 1.3em;
+	font-weight: bold;
+}
+
+#list-container {
+	display: flex;
+	flex-direction: column;
+}
+
+#add-entry > label,
+#settings > label:not([type="radio"] + label) {
+	width: 50px;
+	display: inline-block;
+	margin: 3px 0 3px 2px;
+}
+
+#add-entry-button,
+#settings-button {
+	margin-top: 4px;
+}
+

@@ -1,0 +1,5 @@
+1	Coldplay	A Rush of Blood to the Head	Coldplay-ARushofBlood.jpg
+2	Guns N' Roses	Use Your Illusion I	GnR-UseYourIllusion1.jpg
+3	Danser med Drenge	Danser med Drenge	dmd.jpeg
+4	Tønes	Sån av Salve	tones.jpeg
+5	257ers	Mikrokosmos	257ers.jpeg

@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+body { margin: 0; padding: 0;
+font-family: Verdana, sans-serif; }
+
+#header {
+	background-color: royalblue;
+	border:5px outset lightblue;
+}
+
+#header h1 {
+	margin-top:0;
+	padding-top:0.67em;
+	margin-bottom: 0;
+}
+
+#header h1,#header h2 {
+	/*padding-left: 5px;
+	padding-right: 5px;*/
+	color: white;
+	text-shadow: 2px 2px #333;
+}
+
+#header h2 {
+	font-family: Garamond, serif;
+	font-style: italic;
+	font-size: 1.2em;
+	margin-top: 0;
+}
+
+/*p, h1, h2, h3 {
+	font-family: Verdana, sans-serif;
+}*/
+
+h2, h3 {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: blue;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+p, h1, h2, h3 {
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+span.rank {
+	color: white;
+	background-color: black;
+}
+
+#content p {
+	text-align: justify;
+	text-indent: 2em;
+	color: #999999;
+}
+
+#content p::first-line {
+	color: black;
+}
+
+#content h2 {
+	border-bottom: 1px solid #999999;
+}
+
+#footer {
+	background-color:black;
+}
+
+#footer h2, #footer li{
+	color: white;
+}
+
+#footer li a {
+	color: inherit;
+}
+
+#footer li {
+	color: white;
+	list-style-type: circle;
+}
+
+#footer li:nth-child(1), #footer li:nth-child(2) {
+	list-style-type: disc;
+}
+
+#footer li:nth-child(2) {
+	font-weight: bold;
+}
+
+#footer p {
+	color: yellow;
+	text-align: center;
+	font-style: oblique;
+}

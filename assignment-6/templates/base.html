@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Assignment 6: Gradebook</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <header>
+      A basic nav bar <br />
+      <a href="{{ url_for('index') }}">main</a>
+      <a href="{{ url_for('add_grade') }}">add grade</a>
+    </header>
+    <div id="container">
+      <h1>{% block heading %}{% endblock %}</h1>
+      {% with messages = get_flashed_messages(with_categories=true) %} {% if
+      messages %} {% for category, message in messages %}
+      <p class="{{ category }}">{{ message }}</p>
+      {% endfor %} {% endif %} {% endwith %} {% block container %}{% endblock %}
+    </div>
+    <footer>This is a stupendously fancy footer.</footer>
+  </body>
+</html>

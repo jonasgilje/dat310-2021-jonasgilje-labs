@@ -1,0 +1,61 @@
+{% extends "base.html" %} {% block heading %}Register new grades{% endblock %}
+{% block container %}
+<form action="{{ url_for('add_grade') }}" method="POST">
+  <label for="course">Course</label>
+  <select name="course" id="course">
+    {% if courses|length == 1 %}
+    <option value="{{ courses[0] }}" selected>{{ courses[0] }}</option>
+    {% else %}
+    <option value="" selected>Select</option>
+    {% for course in courses %}
+
+    <option value="{{ course }}">{{ course }}</option>
+
+    {% endfor %} {% endif %}
+  </select>
+  <br />
+  <label for="stud">Student</label>
+  <select name="student" id="student">
+    {% if students|length == 1 %}
+    <option value="{{ students[0] }}" selected>{{ students[0] }}</option>
+    {% else %}
+    <option value="" selected>Select</option>
+    {% for student in students %}
+
+    <option value="{{ student }}">{{ student }}</option>
+
+    {% endfor %} {% endif %}
+  </select>
+  <br />
+  <label for="grade">Grade</label>
+  <select name="grade" id="grade">
+    <option value="" selected>Select</option>
+
+    <option value="A">A</option>
+
+    <option value="B">B</option>
+
+    <option value="C">C</option>
+
+    <option value="D">D</option>
+
+    <option value="E">E</option>
+
+    <option value="F">F</option></select
+  ><br />
+  <label></label>
+  <input type="submit" value="Submit" />
+  <input type="hidden" name="type" value="student" />
+  <!-- add hidden inputs with length of student & course (length of 1 means new redirect.)-->
+  <input
+    type="hidden"
+    name="course_redirect"
+    value="{{ 1 if courses|length == 1 else 0 }}"
+  />
+  <input
+    type="hidden"
+    name="student_redirect"
+    value="{{ 1 if students|length == 1 else 0 }}"
+  />
+</form>
+{% endblock %}

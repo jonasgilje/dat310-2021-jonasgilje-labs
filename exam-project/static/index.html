@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stølsbooking</title>
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12"></script>
+    <script src="https://unpkg.com/vue-router@3.5.1"></script>
+    <script src="https://unpkg.com/vuex@3.6.2"></script>
+    <script>
+      // hjelpefunksjon: html tag foran gjør at komponenters maler formatteres.
+      // også lurt å ha hvis man plutselig skulle trenge at ting ikke escapes
+      // (i html templates er det dessuten sjelden man trenger å escape.)
+      const html = String.raw;
+    </script>
+    <script src="components/calendarC.js"></script>
+    <script src="components/navbarC.js"></script>
+    <script src="components/cabincardC.js"></script>
+    <script src="components/cabininfoC.js"></script>
+    <script src="components/cabininfoinputsC.js"></script>
+    <script src="components/homeC.js"></script>
+    <script src="components/loginpageC.js"></script>
+    <script src="components/reservationstableC.js"></script>
+    <script src="components/mypageC.js"></script>
+    <script src="components/indexpageC.js"></script>
+    <script src="components/adminpageC.js"></script>
+    <script src="components/cabinfiltersC.js"></script>
+    <script src="components/alertmessageC.js"></script>
+    <script src="components/myreservationsC.js"></script>
+    <script src="router.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <nav-bar></nav-bar>
+      <!-- denne key-en gjør at created-hook blir kjørt på nytt når 
+           det routes til samme route (med f.eks. andre parametre) -->
+      <router-view :key="$route.fullPath"></router-view>
+      <div class="my-5" v-if="$route.fullPath !== '/'">&ZeroWidthSpace;</div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

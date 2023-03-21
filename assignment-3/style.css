@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+/* color palette "Adrift in Dreams" from colourlovers.com 
+   link: https://www.colourlovers.com/palette/580974/Adrift_in_Dreams */
+:root {
+	--cp-one: #cff09e;
+	--cp-two: #a8dba8;
+	--cp-three: #79bd9a;
+	--cp-four: #3b8686;
+	--cp-five: #0b486b;
+}
+
+html, body {
+  	height: 100%;
+  	margin: 0;
+}
+.wrapper {
+  	min-height: 100%;
+  	margin-bottom: -125px;
+}
+
+.push {
+	height:135px;
+}
+
+body { 
+	margin: 0; padding: 0;
+	font-family: 'Raleway', sans-serif; 
+	/*display:flex;
+	flex-direction: column;*/
+	min-height: 100%;
+	/*position: relative;
+	padding-bottom: 150px;*/
+}
+
+h1, h2, h3 {
+	font-family: 'Montserrat', sans-serif;
+}
+
+header {
+	/*padding-left: 60px;
+	padding-right: 60px;*/
+	background: var(--cp-four);
+	height: 40px;
+	position: fixed;
+	top: 0;
+	width: 100%;
+}
+
+/* lager indre header-div for å aligne header-content med main
+jf. fullbreddebilde av index.html vedlagt oppgaven. for å ha slik at 
+content alltid er 5% fra randen, ta bort denne div, endre #logo-area
+og header nav til absolute og uncomment left og right */
+#header-max-width { 
+	width:90%;
+	max-width: 1400px;
+	margin:0 auto;
+}
+
+#logo-area {
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	background: var(--cp-five);
+	display: inline-block;
+	/*left: 5%;*/
+	position: relative; 
+	overflow: hidden
+}
+
+#logo-area h1 {
+	color: var(--cp-one);
+	margin-top:0;
+	padding-left:10px;padding-right:10px;
+}
+
+header {
+	z-index: 10;
+}
+
+header nav {
+	position: relative;
+	/*right:5%;*/
+	overflow: hidden;
+	width:150px;
+	float:right;
+}
+
+header ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float:right;
+	height: 40px;
+	line-height: 40px;
+}
+
+header li {
+	float:left;
+
+}
+
+header li a {
+	display: block;
+	width: 45px;
+	text-align: center;
+	text-decoration: none;
+	font-size: 2em !important;
+}
+
+main {
+	padding-top: 100px;
+	width:90%;max-width:1400px;
+	margin: 0 auto;
+	/* for footer stickiness */
+	min-height: 100%;
+	box-sizing: border-box;
+}
+
+main h1 {
+	font-size: 1.2em;
+	padding: 5px;
+	background: var(--cp-two);
+	color: var(--cp-five);
+}
+
+.framed {
+	border: 1px solid var(--cp-three);
+	font-size: 0.8em;
+	padding: 5px;
+}
+
+.framed * {
+	margin:0;
+}
+
+footer {
+	/*position: fixed;*/
+	margin-top: -125px;
+	left: 0; right: 0; bottom: 0;
+	height: 120px;
+	line-height: 120px;
+	border-top:5px solid var(--cp-three);
+	background-color: var(--cp-two)
+}
+
+footer p {
+	color:var(--cp-five);
+	text-align: center;
+	margin: 0; padding: 0;
+
+}
+
+.flexbox-wrapper > aside {
+	background-color: var(--cp-five);
+	flex: 0 0 300px;
+	display: flex;
+  	flex-direction: column;
+  	margin-left: 10px;
+}
+
+.flexbox-wrapper > aside > * {
+	padding: 5px 10px;
+	margin:0;
+}
+
+.flexbox-wrapper > aside > :first-child {
+	margin-top: 15px;
+}
+
+aside a, aside p, aside td {
+	text-decoration: none;
+	color:var(--cp-one);
+}
+aside td {
+	border-top: 1px dashed var(--cp-one);
+	padding-top: 5px; 
+}
+
+.flexbox-wrapper {
+	display: flex;
+	flex-direction: row;
+	width: 100%
+
+}
+
+.flexbox-wrapper > section {
+	display: flex;
+  	flex-direction: column;
+  	flex-basis: 100%;
+  	flex: 1;
+}
+
+.flexbox-wrapper > section * {
+	margin:0;
+}
+
+section > img:first-child {
+	width: 100%;
+	border-top: 5px solid var(--cp-three);
+	border-bottom: 5px solid var(--cp-three);
+}
+
+.index-product-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.index-product-list > article {
+	width: 280px;
+	flex-grow: 1;
+	margin: 5px;
+
+}
+
+.index-product-list > article:hover {
+	background-color: var(--cp-one);
+}
+
+.index-product-list > article img {
+	display: block;
+	margin: auto;
+
+}
+
+.index-product-list > article,
+.product-info,
+.product-flexbox + h1 + .framed,
+#cart-table,
+#checkout {
+	color: var(--cp-five);
+}
+
+.product-info h3, .product-info p {
+	margin: 10px 0;
+}
+
+.index-product-list > article .framed {
+	position: relative;
+}
+
+.index-product-list > article .badge {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	background-color: var(--cp-one);
+	border: 5px solid var(--cp-one);
+	border-radius: 15px;
+	font-size: 2em;
+}
+
+.product-info {
+	width: 250px;
+	height: 250px;
+	position: relative;
+}
+
+/* negativ margin triks for å få space mellom items i flex */
+.product-flexbox {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	margin: -5px -10px;
+}
+
+.product-flexbox > img, .product-info {
+	margin: 5px 10px;
+}
+
+.product-info td:first-child {
+	float:right;
+}
+
+.product-info td:last-child :first-child {
+	width:50px;
+	box-sizing: border-box;
+}
+
+.product-info table {
+	margin:40px auto;
+}
+
+.product-info button {
+	background-color: var(--cp-five);
+	color: var(--cp-one);
+	border: 5px solid var(--cp-five);
+	border-radius: 10px;
+	font-size: 1em;
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+}
+
+.product-flexbox + h1 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#cart-table th {
+	text-align: left;
+	font-weight: bold;
+}
+
+#cart-table button {
+	float:right;
+	background-color: var(--cp-five);
+	color: var(--cp-one);
+	border: 1px solid var(--cp-five);
+	border-radius: 10px;
+	font-size: 1em;
+}
+
+#checkout > .framed {
+	margin: 10px;
+}
+
+/* ordner h3 inni borden */
+#checkout > .framed > h3:first-child {
+	font-weight: bold;
+	background: white;
+	margin-top: -13px;
+   	display: table;
+   	padding: 0 1px;
+}
+
+.checkout-flexbox {
+	padding: 0 55px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+.checkout-flexbox td:first-child {
+	direction: rtl;
+	vertical-align: middle;
+	width: 60px;
+}
+
+.checkout-flexbox td:last-child input{
+	width: 100px;
+}
+
+/* gjør om til kolonne-flex hvis for smal */
+@media (max-width: 800px) {
+	.checkout-flexbox {
+		flex-direction: column;
+	}
+}
+
+/* ekstra div slik at border-h3 forblir uforandret 
+poenget med flexbox her er at items blir spredt ut til sidene */
+#checkout > :last-child > div {
+	padding: 0 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+}
+
+#checkout > :last-child > div > * {
+	display: inline-block;
+}
+
+/* sentrere checkbox i p */
+#checkout > :last-child > div p input {
+	transform: translateY(3px);
+}
+#checkout > :last-child > div p {
+	transform: translateY(-3px)
+}
+
+#checkout > :last-child > div button {
+	background-color: var(--cp-five);
+	color: var(--cp-one);
+	border: 5px solid var(--cp-five);
+	border-radius: 10px;
+	font-size: 1.2em;
+}
+
+	
+	
+

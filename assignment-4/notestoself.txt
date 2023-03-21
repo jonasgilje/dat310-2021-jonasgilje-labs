@@ -1,0 +1,21 @@
+generelle notes to self
+
+"add new"-div: med display none i inline html, kan man sette div.style.display = null; for
+å vise, og div.style.display = "none" for å gjemme.
+
+/*
+
+		modify entry:
+
+		- should be activated on modify icon click ok
+		- should change "add" in "#add-entry > :first-child" & "#add-entry > button" to "modify" ok
+		- should be deactivated on modification ok, plus button ok, cog button ok, trash button OF MODIFYING ENTRY or x button. ok
+		- on completion, should rerender
+		  <div>
+				<span class="entry-name">${contactList[i].name}</span>
+				<span class="entry-telephone">${contactList[i].tel}</span>
+				<a href="mailto:${contactList[i].email}" class="entry-email">${contactList[i].email}</a>
+			</div>
+			(qs is the 1st child of the div with data-entry-id == "data-modifying")
+		- keep track of modifying with data-modifying attribute on #add-entry (delete when finished)
+	*/

@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block container %}
+<h1>Courses</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Course Id</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for course in courses %}
+    <tr>
+      <!-- Add correct link below -->
+      <td>
+        <a href="/course/{{ course.course_id }}">{{ course.course_id }} </a>
+      </td>
+      <td>{{ course.name }}</td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+
+<h1>Students</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Student no</th>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for student in students %}
+    <tr>
+      <!-- Add correct link below -->
+      <td>
+        <a href="/student/{{ student.student_no }}"
+          >{{ student.student_no }}
+        </a>
+      </td>
+      <td>{{ student.name }}</td>
+    </tr>
+
+    {% endfor %}
+  </tbody>
+</table>
+
+<a href="{{ url_for('add_student') }}">add new student</a>
+{% endblock %}
